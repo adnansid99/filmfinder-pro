@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif !important;
+  transition: "0.5s" !important;
+}
+
+:root {
+  --primary-color: #61d8b1;
+  --text-color: #56b4b0;
+}
+
+body {
+  background-color: #161616;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 30vh; */
+}
+
+.header {
+  margin-top: 2rem;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+.searchSumbit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.searchSumbit button {
+  padding: 0.986rem 2rem;
+  border-radius: 0 0.8rem 0.8rem 0;
+  border: none;
+  background-color: var(--primary-color);
+  font-size: 17px;
+}
+
+.searchBox {
+  background-color: transparent;
+  color: rgb(226, 226, 226);
+  padding: 1rem;
+  font-size: 14px;
+  width: 15rem;
+  text-align: center;
+  border: 3px solid var(--primary-color);
+  border-right: none;
+  /* border-radius: 20px; */
+  border-radius: 0.8rem 0 0 0.8rem;
+  outline: none;
+}
+
+.loadSpinner {
+  animation: spin infinite 1s linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.movie-page {
+  width: 80dvw;
+  display: flex;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-auto-rows: 1rf; */
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+  /* box-sizing: border-box; */
+  align-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #171717;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border: 4px solid #373737;
+  border-radius: 10px;
+  height: 17rem;
+  width: 11rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.4s;
+  background-color: #222222;
+  border: 4px solid var(--primary-color);
+}
+
+.card-info h2 {
+  font-size: 13px;
+  margin-bottom: 0.3rem;
+}
+
+.card-info p {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+.card-info img {
+  width: 140px;
+  height: 200px;
+  border-radius: 10px;
+  border: 4px solid #232323;
+}
+
+.footer {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: #666666;
+}
+
+@media (max-width: 460px) {
+  .searchBox {
+    width: 10rem;
+    padding: 0.8rem;
+    font-size: 14px;
+  }
+
+  .searchSumbit button {
+    padding: 0.8rem 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+    border: 3px solid #373737;
+    border-radius: 8px;
+    height: 12rem;
+    width: 7rem;
+  }
+  .card-info h2 {
+    font-size: 11px;
+  }
+  .card-info p {
+    font-size: 10px;
+    margin-bottom: 0.6rem;
+  }
+  .card-info img {
+    width: 100px;
+    height: 140px;
+  }
+
+  .movie-page {
+    width: 90vw;
+    gap: 1rem;
+  }
+  .footer {
+    font-size: small;
+  }
+}
