@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 // Remove the following line since dotenv is not being used
 // import dotenv from 'dotenv';
-const API_URL = `http://www.omdbapi.com/?apikey=${
+const API_URL = `https://www.omdbapi.com/?apikey=${
   import.meta.env.VITE_OMDB_API
 }&`;
 
