@@ -20,7 +20,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: 30vh; */
 }
 
 .header {
@@ -57,7 +56,6 @@ body {
   text-align: center;
   border: 3px solid var(--primary-color);
   border-right: none;
-  /* border-radius: 20px; */
   border-radius: 0.8rem 0 0 0.8rem;
   outline: none;
 }
@@ -81,12 +79,9 @@ body {
 .movie-page {
   width: 80dvw;
   display: flex;
-  /* grid-template-columns: repeat(4, 1fr); */
-  /* grid-auto-rows: 1rf; */
   flex-wrap: wrap;
   justify-items: center;
   justify-content: center;
-  /* box-sizing: border-box; */
   align-content: center;
   gap: 2rem;
 }
@@ -237,7 +232,6 @@ body {
 }
 
 .rightDiv .div-4 h2 {
-  /* font-weight: 600; */
   font-size: 1.5rem;
   margin-bottom: 0.2rem;
   color: #00ad8d;
