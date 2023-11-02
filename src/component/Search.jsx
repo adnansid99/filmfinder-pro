@@ -7,8 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Search() {
-  const { setQuery, isError, isLoading, setlsLoading, setMovie } =
-    useContext(AppContext);
+  const { setQuery, isError, isLoading } = useContext(AppContext);
   const [input, setInput] = useState("");
 
   const handleChange = (event) => {
@@ -17,12 +16,7 @@ export default function Search() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setlsLoading(true);
-    setTimeout(() => {
-      setQuery(input);
-      setlsLoading(false);
-      isError.msg != "Too many results." && setMovie([]);
-    }, 1000);
+    setQuery(input);
   };
 
   return (
@@ -42,10 +36,19 @@ export default function Search() {
           )}
         </button>
       </form>
-      <div>
-        {isError.show && isError.msg == "Incorrect IMDb ID."
-          ? null
-          : isError.msg}
+      <div style={{ color: "white" }}>
+        {isError.show === true ? (
+          isError.msg === "Incorrect IMDb ID." ? null : isError.msg ===
+            "Too many results." ? (
+            isError.msg
+          ) : (
+            <img
+              style={{ width: "100px" }}
+              src="/notFound.svg"
+              alt="Movie not found."
+            />
+          )
+        ) : null}
       </div>
     </>
   );
