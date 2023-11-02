@@ -62,6 +62,10 @@ body {
   outline: none;
 }
 
+.searchBox {
+  transform: scale(1.2);
+}
+
 .loadSpinner {
   animation: spin infinite 0.7s linear;
 }
@@ -250,8 +254,12 @@ body {
   margin-bottom: 0.2rem;
   color: var(--text-color);
 }
+.rightDiv .div-4 p {
+  font-size: small;
+}
 .rightDiv .div-5 p {
   color: #eaeaea;
+  font-size: small;
 }
 
 .rightDiv .div-5 div:nth-child(2) {
