@@ -9,7 +9,9 @@ export default function Header() {
   };
   return (
     <h1
-      style={movie.length === 0 ? { marginTop: "35vh" } : {}}
+      style={
+        movie.length === 0 ? { marginTop: "35vh" } : { transition: "0.6s" }
+      }
       className="header"
       onClick={handleClick}
     >

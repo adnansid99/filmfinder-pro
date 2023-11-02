@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 
-// Remove the following line since dotenv is not being used
-// import dotenv from 'dotenv';
-const API_URL = `https://www.omdbapi.com/?apikey=${
-  import.meta.env.VITE_OMDB_API
-}&`;
+const { VITE_OMDB_API } = import.meta.env;
+
+const API_URL = `https://www.omdbapi.com/?apikey=${VITE_OMDB_API}&`;
 
 const AppContext = React.createContext();
 
