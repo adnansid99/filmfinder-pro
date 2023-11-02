@@ -5,6 +5,7 @@ import {
   faMagnifyingGlass,
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
+import notFoundLogo from "../assets/notFound.svg";
 
 export default function Search() {
   const { setQuery, isError, isLoading } = useContext(AppContext);
@@ -44,7 +45,7 @@ export default function Search() {
           ) : (
             <img
               style={{ width: "100px" }}
-              src="/notFound.svg"
+              src={notFoundLogo}
               alt="Movie not found."
             />
           )
