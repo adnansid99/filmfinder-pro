@@ -204,7 +204,7 @@ body {
   gap: 1rem;
   justify-content: center;
 
-  & .div-1 {
+  .div-1 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -215,7 +215,7 @@ body {
     }
   }
 
-  & .div-2 {
+  .div-2 {
     display: flex;
     gap: 0.5rem;
     align-items: center;
@@ -235,7 +235,7 @@ body {
     }
   }
 
-  & .div-4 {
+  .div-4 {
     & h2 {
       font-size: 1.5rem;
       margin-bottom: 0.2rem;
@@ -247,7 +247,7 @@ body {
     }
   }
 
-  & .div-5 {
+  .div-5 {
     display: flex;
     width: 100%;
     flex-direction: column;
